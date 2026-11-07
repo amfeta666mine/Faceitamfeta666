@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080812">
+<title>AMFETA666MINE // PLAYER PROFILE</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+:root{--bg:#080812;--panel:rgba(16,18,36,.82);--cyan:#00f5ff;--pink:#ff2bd6;--lime:#b7ff3c;--muted:#9ba5c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#f4f7ff;font-family:'Rajdhani',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 15% 15%,#16264b 0,transparent 38%),radial-gradient(ellipse at 85% 35%,#351044 0,transparent 35%),linear-gradient(135deg,#080812,#0b1020 55%,#100817)}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(0,245,255,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,255,.2) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.scan{position:fixed;inset:0;pointer-events:none;z-index:5;background:repeating-linear-gradient(to bottom,transparent 0 3px,rgba(0,0,0,.12) 4px);opacity:.22}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #27304c}
+.logo{font-family:Orbitron,sans-serif;font-weight:900;letter-spacing:2px;color:var(--cyan);text-shadow:0 0 14px #00f5ff80}
+.navtag{font-family:Orbitron,sans-serif;font-size:10px;letter-spacing:2px;color:var(--muted)}
+.hero{padding:72px 0 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.kicker{font-family:Orbitron,sans-serif;color:var(--pink);font-size:11px;letter-spacing:4px;margin-bottom:18px}
+h1{font-family:Orbitron,sans-serif;font-size:clamp(38px,7vw,76px);line-height:1.02;margin:0;letter-spacing:-3px;text-transform:uppercase;text-shadow:0 0 28px #ff2bd64a}
+h1 span{display:block;color:var(--cyan);text-shadow:0 0 25px #00f5ff70}
+.subtitle{font-size:22px;color:#b7c0dc;margin:22px 0 28px;max-width:520px}
+.cta{display:inline-flex;align-items:center;gap:10px;padding:13px 19px;border:1px solid var(--cyan);color:var(--cyan);text-decoration:none;font-family:Orbitron,sans-serif;font-size:11px;letter-spacing:1.5px;box-shadow:0 0 20px #00f5ff20;transition:.2s}
+.cta:hover{background:var(--cyan);color:#080812;box-shadow:0 0 28px #00f5ff80}
+.id-card{position:relative;padding:25px;border:1px solid #3a4264;background:linear-gradient(145deg,#171c35d9,#111020e8);clip-path:polygon(0 0,92% 0,100% 9%,100% 100%,8% 100%,0 91%);box-shadow:0 0 45px #00f5ff16}
+.id-card:before{content:"";position:absolute;top:0;left:0;width:4px;height:100%;background:var(--pink);box-shadow:0 0 15px var(--pink)}
+.avatar{height:180px;display:grid;place-items:center;margin-bottom:20px;background:radial-gradient(circle,#253c61,#101326 65%);border:1px solid #35466b;position:relative;overflow:hidden}
+.avatar:before,.avatar:after{content:"";position:absolute;width:220px;height:1px;background:var(--cyan);box-shadow:0 0 15px var(--cyan);transform:rotate(-35deg)}
+.avatar:after{transform:rotate(35deg);background:var(--pink);box-shadow:0 0 15px var(--pink)}
+.avatar b{font-family:Orbitron,sans-serif;font-size:64px;color:#fff;text-shadow:0 0 12px var(--cyan),0 0 28px var(--pink);z-index:1}
+.online{font-family:Orbitron,sans-serif;font-size:10px;color:var(--lime);letter-spacing:2px}
+.handle{font-family:Orbitron,sans-serif;font-size:20px;margin:9px 0 4px;overflow-wrap:anywhere}
+.mini{color:var(--muted);font-size:14px}
+.section-title{font-family:Orbitron,sans-serif;font-size:17px;letter-spacing:2px;margin:25px 0 18px}
+.section-title:before{content:"// ";color:var(--pink)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.stat,.panel{background:var(--panel);border:1px solid #2b3555;padding:20px;position:relative;backdrop-filter:blur(10px)}
+.stat:after{content:"";position:absolute;left:0;bottom:0;width:45px;height:2px;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.stat .label{font-family:Orbitron,sans-serif;color:var(--muted);font-size:9px;letter-spacing:1.5px}
+.stat .value{font-family:Orbitron,sans-serif;font-size:clamp(21px,3vw,30px);margin-top:10px;color:#fff}
+.stat .value.cyan{color:var(--cyan)}.stat .value.pink{color:var(--pink)}
+.lower{display:grid;grid-template-columns:1fr;gap:18px;margin:18px 0 60px}
+.panel h3{font-family:Orbitron,sans-serif;font-size:13px;letter-spacing:1.5px;margin:0 0 18px}
+.spec{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid #252d49;font-size:17px}
+.spec:last-child{border:0}.spec span:first-child{color:var(--muted)}.spec strong{text-align:right}
+footer{border-top:1px solid #27304c;padding:22px 0 30px;display:flex;justify-content:space-between;gap:12px;color:#7e89aa;font-size:13px}
+footer b{font-family:Orbitron,sans-serif;color:var(--cyan);font-size:10px;letter-spacing:1px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:48px 0 30px;gap:28px}.id-card{max-width:460px;width:100%;margin:auto}.stats{grid-template-columns:repeat(2,1fr)}.lower{grid-template-columns:1fr;margin-bottom:38px}.navtag{font-size:8px}.subtitle{font-size:19px}nav{height:64px}}
+@media(max-width:380px){.wrap{width:calc(100% - 24px)}.stats{gap:9px}.stat{padding:15px}.stat .label{font-size:8px}.stat .value{font-size:21px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<div class="scan"></div><div class="wrap">
+<nav><div class="logo">NIGHT//SHIFT</div><div class="navtag">PLAYER DATABASE · 2077</div></nav>
+<main>
+<section class="hero"><div>
+<div class="kicker">STANDOFF 2 // PLAYER PROFILE</div>
+<h1>AMFETA<span>666MINE</span></h1>
+<p class="subtitle">Шесть лет в игре. Четыре пальца. Только точность, реакция и холодный расчёт.</p>
+<a class="cta" href="#stats">ОТКРЫТЬ ДОСЬЕ <span>↘</span></a>
+</div>
+<aside class="id-card"><div class="avatar"><b>A6</b></div>
+<div class="online">● PLAYER PROFILE / ACTIVE</div><div class="handle">amfeta666mine</div>
+<div class="mini">CYBER UNIT // STANDOFF DIVISION</div></aside></section>
+<section id="stats"><div class="section-title">PLAYER DATA</div><div class="stats">
+<div class="stat"><div class="label">EXPERIENCE</div><div class="value cyan">06 YRS</div></div>
+<div class="stat"><div class="label">AGE</div><div class="value">15</div></div>
+<div class="stat"><div class="label">COMPETITIVE</div><div class="value pink">1870</div></div>
+<div class="stat"><div class="label">ALLIES</div><div class="value cyan">2111</div></div>
+</div></section>
+<div class="lower"><section class="panel"><h3>/// HARDWARE &amp; SETUP</h3>
+<div class="spec"><span>Device</span><strong>OnePlus Ace 6T</strong></div>
+<div class="spec"><span>Playstyle</span><strong>4 fingers</strong></div>
+<div class="spec"><span>Game time</span><strong>6 years</strong></div>
+<div class="spec"><span>Main mode</span><strong>Competitive</strong></div>
+<div class="spec"><span>Codename</span><strong>AMF-666</strong></div>
+</section></div></main>
+<footer><span>AMFETA666MINE // DIGITAL IDENTITY</span><b>NO LIMITS · JUST SKILL</b></footer>
+</div></body></html>
